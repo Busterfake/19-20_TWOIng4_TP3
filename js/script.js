@@ -9,7 +9,7 @@ function start() {
       city = undefined;
     }
   // Création de l'objet apiWeather
-  const apiWeather = new API_WEATHER();
+  const apiWeather = new API_WEATHER(city);
   // Appel de la fonction fetchTodayForecast
 
   apiWeather
