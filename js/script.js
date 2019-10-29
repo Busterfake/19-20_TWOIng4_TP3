@@ -1,6 +1,13 @@
 
 // Fonction appelée lors du click du bouton
 function start() {
+
+    //On va déclarer city pour la faire passer dans le constructeur surchargé de la classe API_WEATHER
+    let city = document.getElementById('city-input').value;
+    //Et si la value est '', on la passe en undefined
+    if(city === ''){
+      city = undefined;
+    }
   // Création de l'objet apiWeather
   const apiWeather = new API_WEATHER();
   // Appel de la fonction fetchTodayForecast
@@ -29,3 +36,4 @@ function start() {
       console.error(error);
     });
 }
+document.onload = start();
